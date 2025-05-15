@@ -162,3 +162,12 @@ footer {
     text-align: center;
   }
 }
+
+.subtitulo-projetos {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #38bdf8;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 5px;
+}

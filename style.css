@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Hero + Navegação */
+.hero {
+  background: linear-gradient(90deg, #10b981, #065f46);
+  padding: 40px 0;
+  color: #fff;
+}
+
+/* Título + Links no topo da seção */
+.hero-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  color: #10b981;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffe600;
+}
+
+/* Conteúdo do Hero */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero span {
+  color: #ffe600;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Cards principais */
+main {
+  padding: 40px 0;
+}
+
+.card {
+  background-color: #1e293b;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Projetos */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.projeto {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  border: 1px solid #334155;
+}
+
+.projeto:hover {
+  transform: scale(1.02);
+}
+
+.projeto h3 {
+  margin-bottom: 10px;
+  color: #10b981;
+}
+
+.projeto a {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.projeto a:hover {
+  text-decoration: underline;
+}
+
+.subtitulo-projetos {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #38bdf8;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 5px;
+}
+
+/* Contacto */
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e293b;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+.linguagens-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.linguagens-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #0f172a;
+  border-left: 4px solid #10b981;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

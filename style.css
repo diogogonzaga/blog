@@ -9,7 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: 'Inter', sans-serif;
   background-color: #0f172a;
@@ -17,58 +16,50 @@ body {
   line-height: 1.6;
 }
 
-/* Layout geral */
 .container {
   width: 90%;
   max-width: 1000px;
   margin: auto;
 }
 
-/* Navbar */
-.navbar {
-  background-color: #1e293b;
-  padding: 20px 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  color: #10b981;
-  font-size: 1.5rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #e2e8f0;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #10b981;
-}
-
-/* Hero */
+/* Hero + Navegação */
 .hero {
   background: linear-gradient(90deg, #10b981, #065f46);
   padding: 40px 0;
   color: #fff;
 }
 
-.hero span {
+/* Título + Links no topo da seção */
+.hero-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  color: #10b981;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
   color: #ffe600;
 }
 
+/* Conteúdo do Hero */
 .hero-content {
   display: flex;
   align-items: center;
@@ -76,6 +67,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+}
+
+.hero span {
+  color: #ffe600;
 }
 
 .profile-img {
@@ -88,7 +83,7 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* Main content */
+/* Cards principais */
 main {
   padding: 40px 0;
 }
@@ -139,6 +134,15 @@ main {
   text-decoration: underline;
 }
 
+.subtitulo-projetos {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #38bdf8;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 5px;
+}
+
 /* Contacto */
 .contact-list li {
   margin-bottom: 10px;
@@ -158,7 +162,6 @@ footer {
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
-    align-items: flex-end;
     gap: 10px;
   }
 
@@ -166,13 +169,4 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-}
-
-.subtitulo-projetos {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 1.3rem;
-  color: #38bdf8;
-  border-bottom: 2px solid #334155;
-  padding-bottom: 5px;
 }

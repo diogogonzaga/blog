@@ -8,8 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
+
+  <!-- Hero com navegação integrada -->
+  <header class="hero">
+    <div class="container hero-header">
       <h1 class="logo">Diogo Gonzaga</h1>
       <ul class="nav-links">
         <li><a href="#sobre">Sobre</a></li>
@@ -17,9 +19,7 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
-  </nav>
 
-  <header class="hero">
     <div class="container hero-content">
       <img src="profile.jpg" alt="Foto de Diogo Gonzaga" class="profile-img" />
       <div>
@@ -32,36 +32,30 @@
   <main class="container">
     <section id="sobre" class="card">
       <h2>Sobre Mim</h2>
-      <p>Tenho <span id="idade"></span> anos, vivo em Santa Maria da Feira e adoro tecnologia e boas práticas de desenvolvimento.</p>
+      <p>Tenho 18 anos, vivo em Santa Maria da Feira e adoro tecnologia e boas práticas de desenvolvimento.</p>
       <p>Fiz o curso de GPSI (Gestão e Programação de Sistemas Informáticos)</p>
     </section>
 
- <section id="projetos" class="card">
-  <h2>Meus Projetos</h2>
+    <section id="projetos" class="card">
+      <h2>Meus Projetos</h2>
+      <h3 class="subtitulo-projetos">Projetos Finalizados</h3>
+      <div class="projetos-grid">
+        <div class="projeto">
+          <h4>Bazar do Brigadeiro</h4>
+          <p>Site com sabores disponíveis, comentários de clientes e métodos de contacto.</p>
+          <a href="https://diogogongasdev.github.io/bazar-brigadeiro/" target="_blank" rel="noopener noreferrer">Ver o site</a>
+        </div>
+      </div>
 
-  <!-- Projetos Principais -->
-  <h3 class="subtitulo-projetos">Projetos Finalizados</h3>
-  <div class="projetos-grid">
-    <div class="projeto">
-      <h4>Bazar do Brigadeiro</h4>
-      <p>Site com sabores disponíveis, comentários de clientes e métodos de contacto.</p>
-      <a href="https://diogogongasdev.github.io/bazar-brigadeiro/" target="_blank" rel="noopener noreferrer">Ver o site</a>
-    </div>
-    <!-- Podes adicionar mais projetos principais aqui -->
-  </div>
-
-  <!-- Projetos Secundários -->
-  <h3 class="subtitulo-projetos">Projetos Secundários</h3>
-  <div class="projetos-grid">
-    <div class="projeto">
-      <h4>Conversor</h4>
-      <p>Conversor de Temperatura e de moeda </p>
-      <a href="https://diogogongasdev.github.io/conversor" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-    </div>
-    <!-- Podes adicionar mais projetos secundários aqui -->
-  </div>
-</section>
-
+      <h3 class="subtitulo-projetos">Projetos do Curso GPSI</h3>
+      <div class="projetos-grid">
+        <div class="projeto">
+          <h4>Bazar do Brigadeiro Antes</h4>
+          <p>Bazar do Brigadeiro apenas com HTML/CSS.</p>
+          <a href="https://diogogongasdev.github.io/bazar_antes/unir_tudo.html" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+        </div>
+      </div>
+    </section>
 
     <section id="contacto" class="card">
       <h2>Contacto</h2>
@@ -75,6 +69,5 @@
     <p>&copy; 2025 Diogo Gonzaga | Desenvolvedor Web</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ function alerta(event, element) {
   event.preventDefault(); // Impede o redirecionamento imediato
 
   Swal.fire({
-    title: "Esta página ainda não está formatada para dispositivos móveis!",
+    title: "Esta página tem apenas alguns recursos que auxiliam o desenvolvimento web, futuramente existirá mais recursos",
     text: "Queres mesmo abrir esta página?",
     icon: "warning",
     showCancelButton: true,

@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -22,14 +21,12 @@ body {
   margin: auto;
 }
 
-/* Hero + Navegação */
 .hero {
   background: linear-gradient(90deg, #10b981, #065f46);
   padding: 40px 0;
   color: #fff;
 }
 
-/* Título + Links no topo da seção */
 .hero-header {
   text-align: center;
   margin-bottom: 30px;
@@ -59,7 +56,6 @@ body {
   color: #ffe600;
 }
 
-/* Conteúdo do Hero */
 .hero-content {
   display: flex;
   align-items: center;
@@ -83,7 +79,6 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* Cards principais */
 main {
   padding: 40px 0;
 }
@@ -101,7 +96,6 @@ main {
   transform: translateY(-5px);
 }
 
-/* Projetos */
 .projetos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -143,12 +137,32 @@ main {
   padding-bottom: 5px;
 }
 
-/* Contacto */
-.contact-list li {
-  margin-bottom: 10px;
+
+
+.contact-card {
+  text-align: center;
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: #e2e8f0;
 }
 
-/* Footer */
+.contact-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.contact-list a:hover {
+  text-decoration: underline;
+  color: #0ea5e9;
+}
+
+
 footer {
   text-align: center;
   padding: 20px;
@@ -173,8 +187,6 @@ footer {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-
-/* Responsivo */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -185,4 +197,17 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+.copy-btn:hover {
+  color: #10b981;
 }

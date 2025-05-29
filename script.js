@@ -1,11 +1,10 @@
-// Calcular idade automaticamente
 const anoNascimento = 2007; // Altere aqui
 const anoAtual = new Date().getFullYear();
 document.getElementById('idade').textContent = anoAtual - anoNascimento;
 
 
 function alerta(event, element) {
-  event.preventDefault(); // Impede o redirecionamento imediato
+  event.preventDefault(); 
 
   Swal.fire({
     title: "Esta página tem apenas alguns recursos que auxiliam o desenvolvimento web, futuramente existirá mais recursos",
@@ -16,8 +15,21 @@ function alerta(event, element) {
     cancelButtonText: "Cancelar"
   }).then((result) => {
     if (result.isConfirmed) {
-      // Só redireciona após confirmação
       window.open(element.href, '_blank');
     }
+  });
+}
+
+function copiarEmail() {
+  const email = document.getElementById('email-text').textContent;
+  navigator.clipboard.writeText(email);
+  Swal.fire({
+    icon: 'success',
+    title: 'Email copiado!',
+    text: email,
+    toast: true,
+    position: 'top-end',
+    timer: 2000,
+    showConfirmButton: false
   });
 }

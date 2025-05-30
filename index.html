@@ -63,42 +63,63 @@
       <h3 class="subtitulo-projetos">Projetos Finalizados</h3>
       <div class="projetos-grid">
         <div class="projeto">
-          <img src="wed.jpeg" alt="Imagem do projeto Bazar do Brigadeiro" class="projeto-img">
+          <img src="bazar.jpeg" alt="Imagem do projeto Bazar do Brigadeiro" class="projeto-img">
           <h4>Bazar do Brigadeiro</h4>
           <p><strong>Descrição:</strong> Site com sabores disponíveis, comentários de clientes e formas de contacto.</p>
           <p><strong>Tecnologias:</strong> <span class="tech-tag">HTML</span>, <span class="tech-tag">CSS</span>, <span class="tech-tag">JavaScript</span></p>
           <a href="https://diogogongasdev.github.io/bazar-brigadeiro/" target="_blank" rel="noopener noreferrer">Ver o site</a>
         </div>
 
-        <div class="projeto">
-          <h4>Apresentação Produto</h4>
-          <p>Modelo de página web para apresentar um produto</p>
-          <a href="https://diogogongasdev.github.io/pagina_apresentacao_produto/" target="_blank">Ver o site</a>
-        </div>
-      </div>
-
-      <h3 class="subtitulo-projetos">Projetos Secundários</h3>
-      <div class="projetos-grid">
-        <div class="projeto">
-          <h4>Conversor</h4>
-          <p>Conversor de Moeda e de Temperatura</p>
-          <a href="https://diogogongasdev.github.io/conversor" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+  <div class="projeto">
+          <img src="connectu.jpeg" alt="Imagem do projeto Bazar do Brigadeiro" class="projeto-img">
+          <h4>Apresentação de Produto</h4>
+          <p><strong>Descrição:</strong>Modelo de página web para apresentar um produto</p>
+          <p><strong>Tecnologias:</strong> <span class="tech-tag">HTML</span>, <span class="tech-tag">CSS</span>, <span class="tech-tag">JavaScript</span></p>
+          <a href="https://diogogongasdev.github.io/pagina_apresentacao_produto/" target="_blank" rel="noopener noreferrer">Ver o site</a>
         </div>
 
-        <div class="projeto">
-          <h4>Gerador de Senhas</h4>
-          <p>Gerador de senhas, onde é possível escolher o tamanho da password</p>
-          <a href="https://diogogongasdev.github.io/gerador_senhas/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-        </div>
+  </div>
+<h3 class="subtitulo-projetos">Projetos Secundários</h3>
+<div class="projetos-grid">
+  
+  <div class="projeto projeto-icone">
+    <i class="fa-solid fa-arrows-rotate fa-3x projeto-icon"></i>
+    <h4>Conversor</h4>
+    <p><strong>Descrição:</strong> Conversor de Moeda e de Temperatura</p>
+    <p><strong>Tecnologias:</strong> 
+      <span class="tech-tag">HTML</span>, 
+      <span class="tech-tag">CSS</span>, 
+      <span class="tech-tag">JavaScript</span>
+    </p>
+    <a href="https://diogogongasdev.github.io/conversor/" target="_blank" rel="noopener noreferrer">Ver o site</a>
+  </div>
 
-        <div class="projeto">
-          <h4>DevTools</h4>
-          <p>Ferramentas úteis durante o desenvolvimento de um projeto</p>
-          <a href="https://diogogongasdev.github.io/devtools" onclick="alerta(event, this)" rel="noopener noreferrer">Ver projeto</a>
-        </div>
-      </div>
-    </section>
+  <div class="projeto projeto-icone">
+    <i class="fa-solid fa-key fa-3x projeto-icon"></i>
+    <h4>Gerador de Senhas</h4>
+    <p><strong>Descrição:</strong> Gerador de senhas, onde é possível escolher o tamanho da password</p>
+    <p><strong>Tecnologias:</strong> 
+      <span class="tech-tag">HTML</span>, 
+      <span class="tech-tag">CSS</span>, 
+      <span class="tech-tag">JavaScript</span>
+    </p>
+    <a href="https://diogogongasdev.github.io/gerador_senhas/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+  </div>
 
+  <div class="projeto projeto-icone">
+    <i class="fa-solid fa-wrench fa-3x projeto-icon"></i>
+    <h4>DevTools</h4>
+    <p><strong>Descrição:</strong> Ferramentas úteis durante o desenvolvimento de um projeto</p>
+    <p><strong>Tecnologias:</strong> 
+      <span class="tech-tag">HTML</span>, 
+      <span class="tech-tag">CSS</span>, 
+      <span class="tech-tag">JavaScript</span>
+    </p>
+    <a href="https://diogogongasdev.github.io/devtools" rel="noopener noreferrer">Ver projeto</a>
+  </div>
+
+</div>
+</section>
     <section id="contacto" class="card">
       <h2>Contacto</h2>
       <ul class="contact-list">
@@ -112,100 +133,6 @@
         </li>
       </ul>
     </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Diogo Gonzaga | Desenvolvedor Web</p>
-      <div class="footer-links">
-        <a href="https://github.com/diogogongasdev" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/dgzin_gz/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100016752254544" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-      </div>
-    </div>
   </footer>
 </body>
 </html>
-
-<script>
-  
-        window.onload = function () {
-            Swal.fire({
-                title: "Site a passar por alterações",
-                text: "O site está a passar por alterações de estética, ainda não está finalizado, tem certeza quer visualizar o site?",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Sim"
-            }).then((result) => {
-                if (result.isConfirmed) {
-        
-                }
-            });
-
-            // Fechar o modal quando o botão de fechar for clicado
-            document.querySelector(".close_conta").onclick = function () {
-                document.getElementById("Modal_conta").style.display = "none";
-            }
-
-            // Fechar o modal quando clicar fora dele
-            window.onclick = function (event) {
-                var modal = document.getElementById("Modal_conta");
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        };
-
-</script>
-
-
-<!--
-
-  <section id="projetos">
-  <div class="interface">
-    <h2 class="titulo">Meus <span>Projetos.</span></h2>
-    <div class="projetos-grid">
-      
-      <div class="projeto">
-        <h4>Bazar do Brigadeiro</h4>
-        <p>Site para encomendas de doces, com design visual e formulário de contato.</p>
-        <a href="https://bazar-do-brigadeiro.vercel.app/" target="_blank">Ver projeto</a>
-      </div>
-
-      <div class="projeto">
-        <h4>Calculadora</h4>
-        <p>Calculadora funcional com operações básicas e teclado numérico.</p>
-        <a href="https://calculadora-seven-beta.vercel.app/" target="_blank">Ver projeto</a>
-      </div>
-
-      <div class="projeto">
-        <h4>Gerador de Senhas</h4>
-        <p>Aplicação para gerar senhas seguras com opções personalizadas de tamanho.</p>
-        <a href="https://gerador-de-senhas-topaz.vercel.app/" target="_blank">Ver projeto</a>
-      </div>
-
-      <div class="projeto">
-        <h4>Relógio Digital</h4>
-        <p>Relógio digital em tempo real com data e hora atualizadas automaticamente.</p>
-        <a href="https://relogio-digital-eight.vercel.app/" target="_blank">Ver projeto</a>
-      </div>
-
-      <div class="projeto">
-        <h4>Jogo da Cobrinha</h4>
-        <p>Versão clássica do Snake Game, desenvolvida com JavaScript.</p>
-        <a href="https://jogo-da-cobrinha-five-beta.vercel.app/" target="_blank">Ver projeto</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<h4><i class="fa-solid fa-cookie-bite"></i> Bazar do Brigadeiro</h4>
-
--->

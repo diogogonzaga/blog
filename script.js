@@ -33,3 +33,32 @@ function copiarEmail() {
     showConfirmButton: false
   });
 }
+
+
+  // Mostra o botão ao descer a página
+  window.addEventListener("scroll", function () {
+    document.getElementById("btn-topo").style.display =
+      window.scrollY > 200 ? "block" : "none";
+  });
+
+  // Realce no menu atual (scrollspy simples)
+  const sections = document.querySelectorAll("main section");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 80;
+      if (pageYOffset >= sectionTop) current = section.getAttribute("id");
+    });
+    navLinks.forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("href").includes(current)) {
+        a.classList.add("active");
+      }
+    });
+  });
+
+
+
+  

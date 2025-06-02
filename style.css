@@ -117,6 +117,16 @@ main {
   gap: 1.5rem;
 }
 
+.projeto-logo {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 15px auto;
+  display: block;
+  object-fit: contain;
+  height: 100px;
+}
+
+
 .projeto {
   background-color: #0f172a;
   padding: 1.5rem;

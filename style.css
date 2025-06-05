@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --cor-primaria: #10b981;
+  --cor-secundaria: #38bdf8;
+  --cor-fundo: #0f172a;
+  --cor-texto: #e2e8f0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -275,4 +282,9 @@ footer {
 .projeto-icon {
   color: #38bdf8;
   margin-bottom: 15px;
+}
+
+
+.moove{
+  margin-left: 23px;
 }

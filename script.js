@@ -6,18 +6,11 @@ document.getElementById('idade').textContent = anoAtual - anoNascimento;
 function alerta(event, element) {
   event.preventDefault(); 
 
-  Swal.fire({
-    title: "Esta página tem apenas alguns recursos que auxiliam o desenvolvimento web, futuramente existirá mais recursos",
-    text: "Queres mesmo abrir esta página?",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonText: "Sim, continuar",
-    cancelButtonText: "Cancelar"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      window.open(element.href, '_blank');
-    }
-  });
+Swal.fire({
+  title: "Futuramente esta página não vai mais existir!",
+  icon: "success",
+  draggable: true
+});
 }
 
 function copiarEmail() {

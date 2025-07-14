@@ -1,57 +1,63 @@
-const anoNascimento = 2007; // Altere aqui
+// Atualiza a idade automaticamente
+const anoNascimento = 2007;
 const anoAtual = new Date().getFullYear();
-document.getElementById('idade').textContent = anoAtual - anoNascimento;
-
-
-function alerta(event, element) {
-  event.preventDefault(); 
-
-Swal.fire({
-  title: "Futuramente esta página não vai mais existir!",
-  icon: "success",
-  draggable: true
-});
+const idadeSpan = document.getElementById('idade');
+if (idadeSpan) {
+  idadeSpan.textContent = anoAtual - anoNascimento;
 }
 
-function copiarEmail() {
-  const email = document.getElementById('email-text').textContent;
-  navigator.clipboard.writeText(email);
+// Alerta de página descontinuada
+function alerta(event) {
+
   Swal.fire({
-    icon: 'success',
-    title: 'Email copiado!',
-    text: email,
-    toast: true,
-    position: 'top-end',
-    timer: 2000,
-    showConfirmButton: false
+    title: "Futuramente esta página não estará disponível!",
+    text: "Este projeto está a ser reformulado.",
+    icon: "info",
+    confirmButtonText: "OK"
   });
 }
 
+// Seleciona todos os links com alerta
+document.querySelectorAll('a[onclick*="alerta"]').forEach(link => {
+  link.addEventListener('click', alerta);
+});
 
-  // Mostra o botão ao descer a página
-  window.addEventListener("scroll", function () {
-    document.getElementById("btn-topo").style.display =
-      window.scrollY > 200 ? "block" : "none";
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  // Abrir/Fechar menu mobile
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
   });
 
-  // Realce no menu atual (scrollspy simples)
-  const sections = document.querySelectorAll("main section");
-  const navLinks = document.querySelectorAll(".nav-links a");
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 80;
-      if (pageYOffset >= sectionTop) current = section.getAttribute("id");
-    });
-    navLinks.forEach((a) => {
-      a.classList.remove("active");
-      if (a.getAttribute("href").includes(current)) {
-        a.classList.add("active");
-      }
+  // Fechar menu ao clicar num link e permitir scroll suave
+  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      // comportamento padrão de scroll suave está ativado no CSS, então não precisamos prevenir
+      // só fechamos o menu, se ele estiver aberto
+      navLinks.classList.remove("active");
     });
   });
+});
 
 
+// Copiar email
+function copiarEmail() {
+  const email = document.getElementById("email-text").textContent;
+  navigator.clipboard.writeText(email)
+    .then(() => {
+      Swal.fire({
+        title: "Email copiado!",
+        text: "O endereço de email foi copiado para a área de transferência.",
+        icon: "success",
+        timer: 2000,
+        showConfirmButton: false
+      });
+    })
+    .catch(err => {
+      console.error("Erro ao copiar o email:", err);
+    });
+}
 
-  

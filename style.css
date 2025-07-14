@@ -310,7 +310,7 @@ footer {
 
   .nav-links {
   position: absolute;
-  top: 15px; /* ajusta conforme tua navbar */
+  top: 0px; /* ajusta conforme tua navbar */
   right: 0;
   left: 0;
   background-color: rgba(20, 20, 40, 0.95);

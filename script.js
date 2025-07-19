@@ -8,14 +8,24 @@ if (idadeSpan) {
 
 // Alerta de página descontinuada
 function alerta(event) {
+  event.preventDefault(); // Impede que o link seja seguido automaticamente
+
+  const link = event.currentTarget.href;
 
   Swal.fire({
     title: "Futuramente esta página não estará disponível!",
     text: "Este projeto está a ser reformulado.",
     icon: "info",
-    confirmButtonText: "OK"
+    showCancelButton: true,
+    confirmButtonText: "Continuar para o site",
+    cancelButtonText: "Cancelar"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.open(link, '_blank'); // Abre em nova aba
+    }
   });
 }
+
 
 // Seleciona todos os links com alerta
 document.querySelectorAll('a[onclick*="alerta"]').forEach(link => {

@@ -4,16 +4,7 @@ Este é o meu site pessoal como Desenvolvedor Web, onde apresento um pouco sobre
 
 ---
 
-## ✨ Sobre Mim
 
-Sou um jovem desenvolvedor web de 18 anos, residente em Santa Maria da Feira, com foco em soluções criativas, funcionais e atenção ao detalhe.
-
-Concluí o curso técnico de GPSI (Gestão e Programação de Sistemas Informáticos), que me proporcionou uma base sólida em:
-- Programação orientada a objetos
-- Bases de dados relacionais
-- Desenvolvimento web full stack
-
----
 
 ## 💻 Tecnologias Utilizadas
 
@@ -29,25 +20,7 @@ Concluí o curso técnico de GPSI (Gestão e Programação de Sistemas Informát
 - **JavaScript** – Interatividade e lógica no front-end
 ---
 
-## 🧠 Linguagens que Domino
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge"/>
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++ Badge"/>
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logoColor=white" alt="SQL Badge"/>
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Badge"/>
-  <img src="https://img.shields.io/badge/Visual%20Basic-68217A?style=for-the-badge&logo=windows&logoColor=white" alt="Visual Basic Badge"/>
-</p>
 
----
-### Em aprendizagem:
-
-<div style="display: flex; align-items: center; gap: 10px;">
-  <img alt="Java" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg">
-</div>
-
----
 
 ## 🗂️ Seções do Site
 

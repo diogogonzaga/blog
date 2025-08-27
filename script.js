@@ -13,8 +13,8 @@ function alerta(event) {
   const link = event.currentTarget.href;
 
   Swal.fire({
-    title: "Futuramente esta página não estará disponível!",
-    text: "Este projeto está a ser reformulado.",
+    title: "Futuramente este projeto estará indisponível!",
+    text: "Futuramente este projeto estará indisponível, deseja acessar o site?",
     icon: "info",
     showCancelButton: true,
     confirmButtonText: "Continuar para o site",
@@ -70,4 +70,5 @@ function copiarEmail() {
       console.error("Erro ao copiar o email:", err);
     });
 }
+
 

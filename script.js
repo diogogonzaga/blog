@@ -1,10 +1,21 @@
 // Atualiza a idade automaticamente
-const anoNascimento = 2007;
-const anoAtual = new Date().getFullYear();
-const idadeSpan = document.getElementById('idade');
-if (idadeSpan) {
-  idadeSpan.textContent = anoAtual - anoNascimento;
+// Data de nascimento (AAA, MM, DD) -> ATENÇÃO: mês começa em 0 (Janeiro = 0)
+const nascimento = new Date(2006, 10, 2); // Exemplo: 15 de março de 2007
+const hoje = new Date();
+
+let idade = hoje.getFullYear() - nascimento.getFullYear();
+const mes = hoje.getMonth() - nascimento.getMonth();
+
+// Ajusta se ainda não fez anos este ano
+if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
+  idade--;
 }
+
+const idadeSpan = document.getElementById("idade");
+if (idadeSpan) {
+  idadeSpan.textContent = idade;
+}
+
 
 // Alerta de página descontinuada
 function alerta(event) {
@@ -70,5 +81,6 @@ function copiarEmail() {
       console.error("Erro ao copiar o email:", err);
     });
 }
+
 
 

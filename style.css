@@ -1,4 +1,3 @@
-/* RESET E CONFIGURAÇÕES BASE */
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +29,6 @@ body {
   margin: auto;
 }
 
-/* HERO SECTION */
 .hero {
   background: linear-gradient(90deg, #10b981, #065f46);
   padding: 40px 0;
@@ -84,7 +82,6 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* SEÇÕES GERAIS */
 main {
   padding: 40px 0;
 }
@@ -350,3 +347,188 @@ footer {
 }
 }
 
+
+
+/* ===============================
+   MODAL
+================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+.modal-link{
+  color: #fff;
+}
+
+/* Modal ativo */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Caixa do modal */
+.modal {
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: #e5e7eb;
+  max-width: 620px;
+  width: 90%;
+  max-height: 85vh;
+  padding: 2.2rem;
+  border-radius: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  overflow: hidden;
+}
+
+.modal-content {
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 10px;
+}
+.modal-content a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #10b981;
+  color: #022c22;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+} 
+
+.modal-content a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+}
+
+.modal-content p {
+  margin-bottom: 0.75rem;
+}
+
+.modal-content ul {
+  margin: 0.75rem 0 1rem 1.2rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.4rem;
+  list-style: disc;
+}
+
+
+/* Animação ao abrir */
+.modal-overlay.active .modal {
+  transform: translateY(0) scale(1);
+}
+
+/* Botão fechar */
+.close-modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close-modal:hover {
+  color: #10b981;
+  transform: scale(1.1);
+}
+
+/* Título */
+#modalTitle {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+/* Imagem */
+#modalImg {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Texto */
+#modalInfo {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+/* Links dentro do modal */
+#modalInfo a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .modal {
+    padding: 1.5rem;
+  }
+
+  #modalTitle {
+    font-size: 1.25rem;
+  }
+}
+
+
+/* ===============================
+   BOTÃO DE ABRIR MODAL
+================================ */
+
+.open-modal {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #10b981;      /* Verde principal */
+  color: #fff;                     /* Texto branco */
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  text-align: center;
+  text-decoration: none;           /* Caso seja <a> */
+}
+
+.open-modal:hover {
+  background-color: #0f9d68;       /* Verde escuro ao passar o mouse */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+}
+
+.open-modal:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+  

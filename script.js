@@ -1,12 +1,9 @@
-// Atualiza a idade automaticamente
-// Data de nascimento (AAA, MM, DD) -> ATENÇÃO: mês começa em 0 (Janeiro = 0)
 const nascimento = new Date(2006, 10, 2); // Exemplo: 15 de março de 2007
 const hoje = new Date();
 
 let idade = hoje.getFullYear() - nascimento.getFullYear();
 const mes = hoje.getMonth() - nascimento.getMonth();
 
-// Ajusta se ainda não fez anos este ano
 if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
   idade--;
 }
@@ -17,9 +14,8 @@ if (idadeSpan) {
 }
 
 
-// Alerta de página descontinuada
 function alerta(event) {
-  event.preventDefault(); // Impede que o link seja seguido automaticamente
+  event.preventDefault();
 
   const link = event.currentTarget.href;
 
@@ -32,13 +28,11 @@ function alerta(event) {
     cancelButtonText: "Cancelar"
   }).then((result) => {
     if (result.isConfirmed) {
-      window.open(link, '_blank'); // Abre em nova aba
+      window.open(link, '_blank');
     }
   });
 }
 
-
-// Seleciona todos os links com alerta
 document.querySelectorAll('a[onclick*="alerta"]').forEach(link => {
   link.addEventListener('click', alerta);
 });
@@ -47,17 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.querySelector(".nav-links");
 
-  // Abrir/Fechar menu mobile
+
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
 
-  // Fechar menu ao clicar num link e permitir scroll suave
+ 
   const links = document.querySelectorAll('.nav-links a[href^="#"]');
   links.forEach(link => {
     link.addEventListener("click", (e) => {
-      // comportamento padrão de scroll suave está ativado no CSS, então não precisamos prevenir
-      // só fechamos o menu, se ele estiver aberto
+
       navLinks.classList.remove("active");
     });
   });
@@ -83,4 +76,60 @@ function copiarEmail() {
 }
 
 
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalInfo = document.getElementById("modalInfo");
+const modalImg = document.getElementById("modalImg");
+const modalMedia = document.querySelector(".modal-media");
 
+// Seleciona todos os botões de abrir modal (todos com a mesma classe)
+document.querySelectorAll(".open-modal").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+
+    // Atualiza título
+    modalTitle.textContent = btn.dataset.title || "";
+
+    // Atualiza imagem, se houver
+    if (btn.dataset.img) {
+      modalImg.src = btn.dataset.img;
+      modalMedia.style.display = "block";
+    } else {
+      modalMedia.style.display = "none";
+      modalImg.src = "";
+    }
+
+    // Atualiza conteúdo via template
+    modalInfo.innerHTML = "";
+    if (btn.dataset.template) {
+      const template = document.getElementById(btn.dataset.template);
+      if (template) {
+        const clone = template.content.cloneNode(true);
+        modalInfo.appendChild(clone);
+      }
+    }
+
+    // Abrir modal
+    modal.classList.add("active");
+  });
+});
+
+// Fechar modal no botão
+closeModal?.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+// Fechar ao clicar fora
+modal.addEventListener("click", e => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
+
+// Fechar com ESC
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && modal.classList.contains("active")) {
+    modal.classList.remove("active");
+  }
+});

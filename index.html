@@ -31,7 +31,7 @@
     </div>
 
     <div class="container hero-content">
-      <img loading="lazy" src="profile.jpg" alt="Foto de Diogo Gonzaga" class="profile-img" />
+      <img loading="lazy" src="images/profile.jpg" alt="Foto de Diogo Gonzaga" class="profile-img" />
       <div>
         <h2>Olá, sou <span>Diogo</span></h2>
         <p>Desenvolvedor Web focado em soluções criativas, funcionais e com atenção ao detalhe.</p>
@@ -63,8 +63,7 @@
       <h2>Linguagens em Aprendizagem</h2>
       <ul class="linguagens-list">
         <li><strong><i class="fa-brands fa-java" style="color:#f89820;"></i> Java</strong> – Programação orientada a objetos</li>
-       <!-- <li><strong><i class="fa-brands fa-react" style="color:#61DAFB;"></i> React</strong> – Biblioteca JavaScript para construção de interfaces de utilizador</li>-->
-      </ul>
+            </ul>
     </section>
 
     <section id="projetos" class="card">
@@ -73,15 +72,53 @@
       <div class="projetos-grid">
   <div class="projeto projeto-icone">
     <i class="fa-solid fa-store fa-3x projeto-icon"></i>
-    <h4>Bazar do Brigadeiro</h4>
-    <p><strong>Descrição:</strong> Site com sabores disponíveis, comentários de clientes e formas de contacto.</p>
+    <h4>Bazar do Brigadeiro-Website Institucional</h4>
+    <p><strong>Descrição:</strong> Website desenvolvido para um negócio local de confeitaria, com o objetivo de apresentar a marca, os produtos e facilitar o contacto com os clientes.</p>
+   
     <p><strong>Tecnologias:</strong> 
       <span class="tech-tag">HTML</span>, 
       <span class="tech-tag">CSS</span>, 
       <span class="tech-tag">JavaScript</span>
     </p>
-    <a href="https://diogogonzaga.github.io/bazar-brigadeiro/" target="_blank" rel="noopener noreferrer">Ver o site</a>
+  <button class="open-modal" data-title="Bazar do Brigadeiro"  data-template="bazar-content">
+  Ver detalhes
+</button>
+
+<template id="bazar-content">
+  <div class="modal-section">
+    <h4>Contexto</h4>
+    <p>Website desenvolvido para um negócio local de confeitaria.</p>
   </div>
+
+  <div class="modal-section">
+    <h4>Problema</h4>
+    <p>Ausência de um site profissional que transmitisse confiança.</p>
+  </div>
+
+  <div class="modal-section">
+    <h4>Solução</h4>
+    <p>Site simples, responsivo e intuitivo.</p>
+  </div>
+
+  <div class="modal-section">
+    <h4>Resultado</h4>
+    <p>Melhoria da presença online e comunicação com clientes.</p>
+  </div>
+
+  <ul class="modal-list">
+    <li>Sites para pequenos negócios</li>
+    <li>Conteúdo claro</li>
+    <li>Foco em usabilidade</li>
+  </ul>
+
+  <a href="https://diogogonzaga.github.io/bazar-brigadeiro/" 
+     target="_blank" 
+     class="modal-link">
+     Ver o site
+  </a>
+</template>
+  </div>
+
 
   <div class="projeto projeto-icone">
     <i class="fa-solid fa-box-open fa-3x projeto-icon"></i>
@@ -92,7 +129,46 @@
       <span class="tech-tag">CSS</span>, 
       <span class="tech-tag">JavaScript</span>
     </p>
-    <a href="https://diogogonzaga.github.io/connectu/" target="_blank" rel="noopener noreferrer">Ver o site</a>
+
+    <button class="open-modal" data-title="Connectu"  data-template="connectu-content">
+  Ver detalhes
+</button>
+
+<template id="connectu-content">
+  <div class="modal-section">
+    <h4>Contexto</h4>
+    <p>Projeto desenvolvido como protótipo de rede social fictícia, com foco em interface e experiência do utilizador.</p>
+  </div>
+
+  <div class="modal-section">
+    <h4>Problema</h4>
+    <p>Necessidade de criar uma interface clara e funcional para troca de mensagens e partilha de conteúdos.</p>
+  </div>
+
+  <div class="modal-section">
+    <h4>Solução</h4>
+    <p>Website simples, responsivo e intuitivo, com páginas de Sobre, Login e Registar, destacando usabilidade e design visual.</p>
+  </div>
+
+  <div class="modal-section">
+    <h4>Resultado</h4>
+    <p>Protótipo funcional que demonstra competências em design de interfaces e desenvolvimento front‑end.</p>
+  </div>
+
+  <ul class="modal-list">
+    <li>Foco em layout limpo e navegação intuitiva</li>
+    <li>Experiência de utilizador pensada para interações sociais</li>
+    <li>Projeto ideal para demonstração de UI/UX e front‑end</li>
+  </ul>
+
+  <a href="https://diogogonzaga.github.io/connectu/" 
+     target="_blank" 
+     class="modal-link">
+     Ver o site
+  </a>
+</template>
+
+    <!-- <a href="https://diogogonzaga.github.io/connectu/" target="_blank" rel="noopener noreferrer">Ver o site</a> -->
   </div>
 </div>
 
@@ -141,21 +217,6 @@
     </p>
     <a href="https://diogogonzaga.github.io/devtools" rel="noopener noreferrer">Ver projeto</a>
   </div>
-
-<!--
-    <div class="projeto projeto-icone">
-    <i class="fa-solid fa-images"></i>
-    <h4>Galeria de Imagens</h4>
-    <p><strong>Descrição:</strong> Uma galeria de fotos onde você pode filtrar por categorias e abrir em modal/lightbox.</p>
-    <p><strong>Tecnologias:</strong> 
-      <span class="tech-tag">HTML</span>, 
-      <span class="tech-tag">CSS</span>, 
-      <span class="tech-tag">JavaScript</span>
-    </p>
-   <a href="https://diogogonzaga.github.io/galeria/" class="upgrade" target="_blank" rel="noopener noreferrer" onclick="alerta">Ver o site</a>
-
-  </div>
--->
 </div>
 </section>
     <section id="contacto" class="card">
@@ -192,10 +253,24 @@
         </li>
       </ul>
     </section>
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="close-modal" id="closeModal">&times;</button>
+
+    <h2 id="modalTitle"></h2>
+
+    <div class="modal-media">
+      <img src="" id="modalImg">
+    </div>
+
+    <div id="modalInfo" class="modal-content"></div>
+  </div>
+</div>
+  </div>
     </main>
   <footer>
   <div class="footer-content">
-    <p>&copy; 2025 Diogo Gonzaga | Desenvolvedor Web</p>
+    <p>&copy; 2026 Diogo Gonzaga | Desenvolvedor Web</p>
     <div class="footer-links">
       <a href="https://github.com/diogogonzaga" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://www.instagram.com/dgzin_gz/" target="_blank" title="LinkedIn"><i class="fab fa-instagram"></i></a>
@@ -205,16 +280,3 @@
 </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

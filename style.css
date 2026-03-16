@@ -141,6 +141,8 @@ main {
   justify-content: space-between;
   height: 100%;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+  position: relative; /* IMPORTANTE */
 }
 
 .projeto:hover {
@@ -532,3 +534,18 @@ footer {
   box-shadow: none;
 }
   
+
+.estrela{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 18px;
+}
+.concluido{
+  color:#10b981; /* verde */
+}
+
+.incompleto{
+  color:#9ca3af; /* cinzento */
+  opacity:0.6;
+}
